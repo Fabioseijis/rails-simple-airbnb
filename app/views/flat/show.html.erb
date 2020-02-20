@@ -1,0 +1,29 @@
+<h1>Flat#show</h1>
+<p>Find me in app/views/flat/show.html.erb</p>
+<div class = "container " >
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+
+      <h1>Info of Task</h1>
+      <div class='shadow p-3 mb-2 bg-white rounded'>
+        <h2>Title:</h2>
+        <p><%= @task.title %></p>
+      </div>
+      <div class='shadow p-3 mb-2 bg-black rounded'>
+        <h2>Details:</h2>
+        <p><%= @task.details %></p>
+      </div>
+      <div class='shadow p-3 mb-2 bg-black rounded'>
+        <h2>Completed:</h2>
+        <p><%= @task.completed %></p>
+      </div>
+      <div class="d-flex justify-content-between">
+        <%= link_to 'Edit', edit_task_path(@task), class:'btn btn-danger mr-5 w-50' %>
+
+        <%= link_to 'Remove this Task', task_path, method: :delete, class:'btn btn-danger w-50' %>
+
+        <%= link_to  'home', tasks_path, class:'btn btn-danger ml-5 w-50'%>
+      <div>
+  </div>
+</div>
+
